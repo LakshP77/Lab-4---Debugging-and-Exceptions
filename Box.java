@@ -1,62 +1,46 @@
-//This class represents a box with a width, height, and depth.
-//The variable grade is a measure of the thickness of the cardboard
-//used to construct the box.
+public class Box {
 
-public class Box{
+    private int width, height, depth, grade;
 
-    private int width, depth;
-    private static int height, grade;
-
-    //class constructor
-    public void Box2(int width, int height, int depth, int grade)
-    {
-        width = width;
-        height = height;
-        depth = depth;
-        grade = grade;
+    // Proper constructor
+    public Box(int width, int height, int depth, int grade) {
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
+        this.grade = grade;
     }
 
-    //Two boxes should be considered equivalent if their volume is
-    //the same and they are constructed out of the same grade of cardboard.
-    //returns true if they are equivalent and false otherwise
-    public boolean equals(Box b)
-    {
-        return this.getVolume() == b.getVolume() && this.getGrade() = b.getGrade();
+    // Two boxes are equal if their volume and grade are the same
+    public boolean equals(Box b) {
+        return this.getVolume() == b.getVolume() && this.getGrade() == b.getGrade();
     }
 
-    //If this Box is larger than the argument Box b
-    //then return this Box - otherwise return b
-    public Box larger(Box b)
-    {
-        if(b.getVolume() > this.getVolume)
-            return this;
-        return b;
+    // Return the larger box by volume
+    public Box larger(Box b) {
+        if (b.getVolume() > this.getVolume()) {
+            return b;
+        }
+        return this;
     }
 
-    //Simple getter methods
-    public int getGrade()
-    {
-        return g;
+    // Getter methods
+    public int getGrade() {
+        return grade;
     }
 
-    public int getVolume()
-    {
-        return width * height * depth * grade;
+    public int getVolume() {
+        return width * height * depth;
     }
 
-    public int getWidth()
-    {
+    public int getWidth() {
         return width;
     }
 
-    public double getHeight()
-    {
+    public int getHeight() {
         return height;
     }
 
-    public int getDepth(int b)
-    {
-        return b;
+    public int getDepth() {
+        return depth;
     }
 }
-
