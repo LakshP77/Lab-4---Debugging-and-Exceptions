@@ -9,20 +9,19 @@ When an object is passed to a method, Java passes a copy of the reference (addre
 
 2. When a primitive is passed to a method, dzoes the scope of that primitive change?
 
-No.
-The primitive’s scope stays local to where it was declared. The method only receives a copy so changes inside the method do not affect the original variable.
-
+No. The primitive’s scope stays local to where it was declared. 
+The method only receives a copy so changes inside the method do not affect the original variable.
 
 3. What about when an object is passed to a method?
 
 When an object is passed, the reference* to that object is copied and sent to the method.
 Both the original and the parameter point to the same memory location so any changes to the object’s internal state will be visible outside the method.
 
-
 4. How would you describe the scope of an object that has been passed to a method?
 
 The object itself has global visibility as long as a reference to it exists.
-However, the reference variable’s name inside the method (like `c`) is local — it’s just another pointer to the same object.
+However, the reference variable’s name inside the method (like `c`) is local  
+It’s just another pointer to the same object.
 
 */
 
